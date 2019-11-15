@@ -1,6 +1,4 @@
-/*Name: Shuwen Wang
-  Assignment: Assignment2
-  Program: Software Engineering
+/*
   Break the input string down into three strings with same length from beginning to end.
   The string must have the length of multiple of three.
 */
