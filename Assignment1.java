@@ -1,6 +1,4 @@
-/*Name: Shuwen Wang
-  Assignment: Assignment1
-  Program: Software Engineering
+/*
   Calculate student's final grade regarding on these inputs entered by the user, such as
   midterm exam 1 and 2, final exam, and assignments. Each input has a different weight.
 */
