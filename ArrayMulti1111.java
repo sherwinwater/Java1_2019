@@ -90,24 +90,24 @@ public class ArrayMulti1111 {
     //    3. deletes the store from the array
     //    4. prints a list of all remaining stores
 
-    //    String[] store = {"bay", "Tim", "Superstore", "lowes"};
-    //    Scanner sc = new Scanner(System.in);
-    //    System.out.println("enter a store you like to delete");
-    //    String deleteStore = sc.next();
-    //    String[] newStore;
-    //    for (int i = 0; i < store.length; ++i){
-    //      //delete it
-    //      if (store[i].equalsIgnoreCase(deleteStore)){
-    //        for (int j = i ; j < store.length -1 ; ++j){
-    //          store[j] = store[j + 1];
-    //        }
-    //        store[store.length-1] = "";
-    //      }
-    //
-    //    }
-    //
-    //    for (String s : store)
-    //      System.out.println(s);
+        String[] store = {"bay", "Tim", "Superstore", "lowes"};
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a store you like to delete");
+        String deleteStore = sc.next();
+        String[] newStore;
+        for (int i = 0; i < store.length; ++i){
+          //delete it
+          if (store[i].equalsIgnoreCase(deleteStore)){
+            for (int j = i ; j < store.length -1 ; ++j){
+              store[j] = store[j + 1];
+            }
+            store[store.length-1] = "";
+          }
+
+        }
+
+        for (String s : store)
+          System.out.println(s);
 
 
     //    String[] x = {"x", "y"};
