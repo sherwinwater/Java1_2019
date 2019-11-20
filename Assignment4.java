@@ -1,8 +1,5 @@
 /*
-Name: <Shuwen Wang>
-Course: PROG10082
-Assignment: 4
-Class: Assignment4
+ Assignment4
  */
 
 import java.util.Scanner;

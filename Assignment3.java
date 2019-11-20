@@ -1,6 +1,4 @@
-/*Name: Shuwen Wang
-  Assignment: Assignment3
-  Program: Software Development and Networking
+/*
   Calculate Chinese Zodiac by the year or Zodiac by the month and day input from the user.
 */
 

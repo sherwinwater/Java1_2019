@@ -1,7 +1,4 @@
 /*
-Name: <Shuwen Wang>
-Course: PROG10082
-Assignment: 4
 Class: Student
  */
 
