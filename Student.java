@@ -72,10 +72,14 @@ public class Student {
         //store the student
         if (numberIsValidate && nameIsValidate && programIsValidate
                 && numberIsValidateSpace && nameIsValidateSpace && programIsValidateSpace){
-            String[] newStudent = {number, name, program};
-            student[studentSize] = newStudent;
-            //add student size
-            ++studentSize;
+            //check if 30 students are at capacity.
+            if(studentSize < 30) {
+                String[] newStudent = {number, name, program};
+                student[studentSize] = newStudent;
+                //add student size
+                ++studentSize;
+            }else System.out.println("It's at capacity with " + studentSize +" students " +
+                    "and can't store new student.");
         }
 
     }
@@ -85,7 +89,7 @@ public class Student {
     public void deleteStudentByNumber(String number) {
 
         //delete the matched row by number: replace the i row with i+1 row until the last row.
-        for (int i =0; i < studentSize; ++i){
+        for (int i = 0; i < studentSize; ++i){
             if(number.equalsIgnoreCase(student[i][0])) {//check the number
                 for (int j = i; j < studentSize - 1; ++j) { // replace the rows(>=i)
                     for (int k = 0; k < student[j].length; ++k)
@@ -94,6 +98,7 @@ public class Student {
                 String[] empty = {};
                 student[studentSize - 1] = empty; //delete the last row
                 --studentSize; // reduce student size
+                i--;
             }
         }
     }
@@ -106,14 +111,21 @@ public class Student {
         //delete the matched row by name: replace the i row with i+1 row until the last row.
         for (int i =0; i < studentSize; ++i){
             if(name.equalsIgnoreCase(student[i][1])) { //check the name
-                for (int j = i; j < studentSize - 1; ++j) {//replace the row (>=i)
-                    for (int k = 0; k < student[j].length; ++k) {
-                        student[j][k] = student[j+1][k]; // replace j row with j+1 row
-                    }
+                //move up method
+//                for (int j = i; j < studentSize - 1; ++j) {//replace the row (>=i)
+//                    for (int k = 0; k < student[j].length; ++k) {
+//                        student[j][k] = student[j+1][k]; // replace j row with j+1 row
+//                    }
+//                }
+                // trail replace method
+                for (int k = 0; k < student[i].length; ++k) {
+                    student[i][k] = student[studentSize - 1][k]; // replace j row with j+1 row
                 }
+
                 String[] empty = {};
                 student[studentSize - 1] = empty; //delete the last row
                 --studentSize;//reduce studentSize
+                i--;
             }
         }
     }
