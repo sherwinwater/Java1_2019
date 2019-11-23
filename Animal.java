@@ -31,7 +31,7 @@ public class Animal {
   }
 
   public int getYearOfBirth() {
-    return yearOfBirth;
+    return yearOfBirth++;
   }
 
   public void setYearOfBirth(int yearOfBirth) {

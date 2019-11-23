@@ -92,8 +92,10 @@ public class Student {
         for (int i = 0; i < studentSize; ++i){
             if(number.equalsIgnoreCase(student[i][0])) {//check the number
                 for (int j = i; j < studentSize - 1; ++j) { // replace the rows(>=i)
-                    for (int k = 0; k < student[j].length; ++k)
-                        student[j][k] = student[j+1][k];  // replace j row with j+1 row
+                    student[j] = student[j+1];
+
+//                    for (int k = 0; k < student[j].length; ++k)
+//                        student[j][k] = student[j+1][k];  // replace j row with j+1 row
                 }
                 String[] empty = {};
                 student[studentSize - 1] = empty; //delete the last row
