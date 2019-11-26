@@ -14,6 +14,11 @@ public class Animal {
     daysInZoo = daysHere;
   }
 
+
+  public String toString(){
+    return species +" " + name +" "+ yearOfBirth + " " + gender;
+  }
+
   public String getSpecies() {
     return species;
   }

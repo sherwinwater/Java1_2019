@@ -1,44 +1,46 @@
 public class Truck {
+  //declare variables
+  final double COST_PER_AXLE = 2.0;
+  final double COST_PER_KM = 0.2;
+
   int numberOfAxles;
   double weightOfTruck;
   double kilometersOfHighway;
+  double costPerLbs;
 
+  // create a Truck object
   public Truck(int numberOfAxles, double weightOfTruck, double kilometersOfHighway) {
     this.numberOfAxles = numberOfAxles;
     this.weightOfTruck = weightOfTruck;
     this.kilometersOfHighway = kilometersOfHighway;
   }
 
+  //get total cost
   public double getCost() {
-    //declare variables
-    int costPerAxle = 2;
-    double costPerKm = 0.2;
-    double costPerLbs;
-    int costOfAxles;
-    double costOfKm;
-    double costOfWeight;
-    double costOfTotal = 0;
-
-    //catch exception
-    try {
-//      if values provided is < 0 (for axles) and < 0.0 (for kms and distance),
-//      default the value to 0 (for axles) and 0.0 (for kms and distance).
-      if (numberOfAxles < 0) numberOfAxles = 0;
-      if (kilometersOfHighway < 0.0) kilometersOfHighway = 0.0;
-      if (weightOfTruck < 10000) costPerLbs = 0.003;
-      else if (weightOfTruck >= 10000 && weightOfTruck <= 20000)
-        costPerLbs = 0.0031;
-      else costPerLbs = 0.0032;
-
-      //calculate the cost
-      costOfAxles = costPerAxle * numberOfAxles;
-      costOfKm = costPerKm * kilometersOfHighway;
-      costOfWeight = costPerLbs * weightOfTruck;
-      costOfTotal = costOfAxles + costOfKm + costOfWeight;
-
-    } catch (Exception e) {
-      System.out.println("something wrong. please input again.");
-    }
-    return costOfTotal;
+      return getCostByAxles() + getCostByDistance() + getCostByWeight();
   }
+
+  //get cost by weight
+  public double getCostByWeight() {
+    if (weightOfTruck < 10000)
+      costPerLbs = 0.003;
+    else if (weightOfTruck <= 20000)
+      costPerLbs = 0.0031;
+    else
+      costPerLbs = 0.0032;
+    return costPerLbs * weightOfTruck;
+  }
+
+  // get cost by distance
+  public double getCostByDistance() {
+    if(kilometersOfHighway < 0 ) kilometersOfHighway = 0.0;
+    return COST_PER_KM * kilometersOfHighway;
+  }
+
+  //get cost by axles
+  public double getCostByAxles() {
+    if (numberOfAxles < 0) numberOfAxles = 0;
+    return COST_PER_AXLE * numberOfAxles;
+  }
+
 }

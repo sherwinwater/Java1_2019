@@ -14,6 +14,7 @@ public class AnimalOOP {
         System.out.println(lion1.getName());
         System.out.println(tiger.getGender());
         System.out.println(lion2.getYearOfBirth());
+        System.out.println(lion1);
 
 
     }
