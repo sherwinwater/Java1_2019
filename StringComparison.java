@@ -52,7 +52,7 @@ public class StringComparison {
     System.out.println(s.replaceAll("a", "-"));
 
     System.out.println("***** matches *****");
-    System.out.println("a".matches("a"));
+    System.out.println("abc".matches("ab"));
     System.out.println("a".matches("A"));
     System.out.println("a".matches(" "));
 
