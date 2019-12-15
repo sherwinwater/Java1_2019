@@ -62,6 +62,7 @@ public class Array1113 {
 //        }
         String[] e = {};
         patient[5] = e;
+//        patient[5] = null; // nullpointerexception
 
         for (int i = 0; i < patient.length; ++i){
           for (int j = 0; j < patient[i].length; ++j){

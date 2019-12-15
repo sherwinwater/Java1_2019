@@ -10,8 +10,8 @@ public class Exception1120 {
       System.out.println("incorrect input");
     }
 
-      int g = sc.nextInt();
-      System.out.println(g);
+//      int g = sc.nextInt();
+//      System.out.println(g);
 //      if ( g == 0) throw new Exception("cannot be 0");
 
   }

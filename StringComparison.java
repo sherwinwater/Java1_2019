@@ -52,9 +52,9 @@ public class StringComparison {
     System.out.println(s.replaceAll("a", "-"));
 
     System.out.println("***** matches *****");
-    System.out.println("abc".matches("ab"));
+    System.out.println("abc".matches("ab(.*)"));
     System.out.println("a".matches("A"));
-    System.out.println("a".matches(" "));
+    System.out.println("a".matches("a"));
 
     System.out.println("***** indexOf *****");//first index of
     s = "Java is a lot of fun";
@@ -67,6 +67,10 @@ public class StringComparison {
     System.out.println(s.lastIndexOf("a"));
     System.out.println(s.lastIndexOf("A"));//-1
     System.out.println(s.lastIndexOf(" "));
+
+    System.out.println("***** split *****");
+    for(String i : s.split(" "))
+    System.out.println(i);
 
     System.out.println("***** String Array *****");
     char[] helloArray = {'h', 'e', 'l', 'l', 'o', '.'};

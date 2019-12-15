@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class Strings0918 {
     public static void main(String[] args) {
 
@@ -66,8 +65,7 @@ public class Strings0918 {
         System.out.printf("%n");
         System.out.printf("Printing char lowercase %c", 'h');
         System.out.printf("%n");
-        System.out.printf("Printing char uppercase %C", 'h');
-        System.out.printf("%n");
+        System.out.printf("Printing char uppercase %C%n", 'h');
         System.out.printf("I got %.2f%% in Math", 100.0);
         System.out.printf("%n");
 
@@ -126,14 +124,14 @@ public class Strings0918 {
 // width
         System.out.println("****** Width with int****** ");
         System.out.printf("Width is 9 %9d%n",1234567);
-        System.out.printf("Width is 1 %1d%n",1234567);
+        System.out.printf("Width is 1 %1d%n",1234567); //not work
         System.out.printf("Width of 6 defined int %6d%n",123);
         System.out.printf("Width not defined %d%d%n",123, 789);
         System.out.printf("Width of 4 and 6 defined %4d%4d%n",123, 789);
 
         System.out.println("****** Width with String****** ");
         System.out.printf("Width is 9 %9s%n","Hello");
-        System.out.printf("Width is 1 %1s%n","Hello");
+        System.out.printf("Width is 1 %1s%n","Hello"); //not work
         System.out.printf("Width not defined %s%s%n","Hello", "this is java");
         System.out.printf("Width of 6 and 5 defined %-6s%5s%n","Hello", "this" +
                 " is java");
@@ -155,7 +153,7 @@ public class Strings0918 {
         System.out.println("**************************");
 
         double m = 19.3393;
-        System.out.printf("%1.3f%n", m);
+        System.out.printf("%1.2f%n", m);
 
         String temp = "Hello";
         System.out.printf("%-4.4S%n", temp);

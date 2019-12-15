@@ -7,9 +7,11 @@ public class StudentMockexam {
     this.name = name;
     this.yearOfBorn = yearOfBorn;
   }
+
   public int age(){
     return THISYEAR - yearOfBorn;
   }
+
   public String toString(){
     return name + " is "+ age()+" years old";
   }
