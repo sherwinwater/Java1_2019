@@ -13,7 +13,7 @@ public class JdbcSelectTest {   // Save as "JdbcSelectTest.java"
             Statement stmt = conn.createStatement();
     ) {
       // Step 3: Execute a SQL SELECT query. The query result is returned in a 'ResultSet' object.
-      String strSelect = "select title, price, qty from books";
+      String strSelect = "select id, title, price, qty from books";
       System.out.println("The SQL statement is: " + strSelect + "\n"); // Echo For debugging
 
       ResultSet rset = stmt.executeQuery(strSelect);
@@ -23,10 +23,11 @@ public class JdbcSelectTest {   // Save as "JdbcSelectTest.java"
       System.out.println("The records selected are:");
       int rowCount = 0;
       while(rset.next()) {   // Move the cursor to the next row, return false if no more row
+        int  id = rset.getInt("id");
         String title = rset.getString("title");
         double price = rset.getDouble("price");
         int    qty   = rset.getInt("qty");
-        System.out.println(title + ", " + price + ", " + qty);
+        System.out.println(id+ ", "+ title + ", " + price + ", " + qty);
         ++rowCount;
       }
       System.out.println("Total number of records = " + rowCount);

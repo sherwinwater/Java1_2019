@@ -86,5 +86,6 @@ public class StringComparison {
     for (char i : c){
       System.out.print(i);
     }
+
   }
 }

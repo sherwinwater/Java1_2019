@@ -168,6 +168,12 @@ public class Strings0918 {
         String courseSubString2 = course.substring(2,2);
         System.out.println(courseSubString2);
 
+        //string format
+        String snull = "";
+        String s2null = String.format("%-10s\t",snull);
+        String s3null = s2null + "h"+ s2null + "hello";
+        System.out.println(s3null);
+
     }
 
 }
